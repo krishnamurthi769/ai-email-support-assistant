@@ -7,14 +7,12 @@ from PIL import Image
 load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
-# ---------- PAGE CONFIG ----------
 st.set_page_config(
     page_title="AI Support Assistant",
     page_icon="💼",
     layout="centered"
 )
 
-# ---------- CUSTOM CSS ----------
 st.markdown("""
     <style>
         body {
@@ -56,13 +54,11 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# ---------- HEADER ----------
 st.markdown("<div class='main-container'>", unsafe_allow_html=True)
 
 st.markdown("<h1>💼 AI Email Support Assistant</h1>", unsafe_allow_html=True)
 st.markdown("<p class='sub'>Analyze support emails or screenshots → Detect issue → Generate reply automatically</p>", unsafe_allow_html=True)
 
-# ---------- INPUT ----------
 email_input = st.text_area("📩 Paste user email here:", height=200)
 
 uploaded_img = st.file_uploader("📷 Upload screenshot (optional)", type=["png", "jpg", "jpeg"])
@@ -70,17 +66,14 @@ uploaded_img = st.file_uploader("📷 Upload screenshot (optional)", type=["png"
 generate = st.button("⚡ Generate AI Response", use_container_width=True)
 
 
-# ---------- LOGIC ----------
 if generate:
 
-    # Extract text from screenshot (if uploaded)
     extracted_text = ""
     if uploaded_img:
         st.info("🔍 Extracting text from screenshot...")
 
         img_bytes = uploaded_img.read()
 
-        # Vision prompt
         vision_prompt = """
         Extract all visible text from this screenshot.
         Return ONLY the text, no explanation.
@@ -101,7 +94,6 @@ if generate:
         except Exception as e:
             st.error(f"Image extraction error: {e}")
 
-    # Combine email + extracted text
     final_input = email_input + "\n" + extracted_text
 
     if final_input.strip() == "":
@@ -134,5 +126,4 @@ if generate:
 
 st.markdown("</div>", unsafe_allow_html=True)
 
-# ---------- FOOTER ----------
 st.markdown("<br><hr><p style='text-align: center; color: #6c757d;'>Developed by Krishna Murthi</p>", unsafe_allow_html=True)
