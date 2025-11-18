@@ -111,7 +111,7 @@ AI-EMAIL/
 ### 1️⃣ Clone the Repository
 
 ```
-git clone https://github.com/YOUR-USERNAME/AI-EMAIL.git
+git clone https://github.com/krishnamurthi769/ai-email-support-assistant
 cd AI-EMAIL
 ```
 
@@ -136,7 +136,7 @@ streamlit run app.py
 ```
 
 The app opens at:
-👉 http://localhost:8501/
+👉 http://localhost:8502/
 
 ---
 
@@ -171,43 +171,6 @@ AI extracts text → analyzes → generates support reply.
 📸 AI Response
 📸 Auto Reply
 ```
-
----
-
-## 🌐 Deployment (Streamlit Cloud)
-
-### 1. Go to:
-
-https://share.streamlit.io
-
-### 2. Create a New App
-
-### 3. Select Repo and Branch
-
-- Repo: `yourusername/AI-EMAIL`
-- Branch: `main`
-- File: `app.py`
-
-### 4. Add Environment Variable
-
-```
-OPENAI_API_KEY = your_api_key
-```
-
-### 5. Deploy 🎉
-
----
-
-## 🎯 Assignment Mapping
-
-| Requirement                          | Status                |
-| ------------------------------------ | --------------------- |
-| Solve real repetitive/manual problem | ✔️                    |
-| LLM-powered automation               | ✔️                    |
-| Streamlit prototype                  | ✔️                    |
-| Practical business impact            | ✔️                    |
-| GitHub link                          | ✔️                    |
-| Short presentation                   | ✔️ (You will add PPT) |
 
 ---
 
