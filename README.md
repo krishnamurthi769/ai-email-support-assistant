@@ -8,10 +8,8 @@ This project solves a real repetitive problem faced by IT Support & Helpdesk tea
 
 ## 🚀 Live Demo
 
-(Add after deployment)
-
 ```
-https://<your-app-name>.streamlit.app
+https://ai-email-support-assistant.streamlit.app/
 ```
 
 ---
